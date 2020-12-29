@@ -1,0 +1,95 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="prueb0AsociadosApp.cuota.home.title">Cuotas</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-cuota" [routerLink]="['/cuota/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="prueb0AsociadosApp.cuota.home.createLabel">
+            Create a new Cuota
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'prueb0AsociadosApp.cuota.home.search' | translate }}">
+
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon icon="search"></fa-icon>
+                    </button>
+
+                    <button class="input-group-append btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+                        <fa-icon icon="trash-alt"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="cuotas?.length === 0">
+        <span jhiTranslate="prueb0AsociadosApp.cuota.home.notFound">No cuotas found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="cuotas && cuotas.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.abono2019">Abono 2019</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.abono2019Q">Abono 2019 Q</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.fecha2019Q">Fecha 2019 Q</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.abono2020">Abono 2020</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.abono2020Q">Abono 2020 Q</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.fecha2020Q">Fecha 2020 Q</span></th>
+                    <th scope="col" ><span jhiTranslate="prueb0AsociadosApp.cuota.asociado">Asociado</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cuota of cuotas ;trackBy: trackId">
+                    <td><a [routerLink]="['/cuota', cuota.id, 'view']">{{ cuota.id }}</a></td>
+                    <td>{{ cuota.abono2019 }}</td>
+                    <td>{{ cuota.abono2019Q }}</td>
+                    <td>{{ cuota.fecha2019Q | date:'medium' }}</td>
+                    <td>{{ cuota.abono2020 }}</td>
+                    <td>{{ cuota.abono2020Q }}</td>
+                    <td>{{ cuota.fecha2020Q | date:'medium' }}</td>
+                    <td>
+                        <div *ngIf="cuota.asociado">
+                            <a [routerLink]="['/asociado', cuota.asociado?.id, 'view']" >{{ cuota.asociado?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/cuota', cuota.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/cuota', cuota.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(cuota)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

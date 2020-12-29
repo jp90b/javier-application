@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pago1">
+            <h2><span jhiTranslate="prueb0AsociadosApp.pago1.detail.title">Pago 1</span> {{ pago1.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="prueb0AsociadosApp.pago1.cantidad1">Cantidad 1</span></dt>
+                <dd>
+                    <span>{{ pago1.cantidad1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.pago1.fecha1">Fecha 1</span></dt>
+                <dd>
+                    <span>{{ pago1.fecha1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.pago1.asociado">Asociado</span></dt>
+                <dd>
+                    <div *ngIf="pago1.asociado">
+                        <a [routerLink]="['/asociado', pago1.asociado?.id, 'view']">{{ pago1.asociado?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pago-1', pago1.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

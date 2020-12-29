@@ -1,0 +1,50 @@
+entity Asociado
+
+{
+nombre String 
+apellidos String
+email String 
+acciones Boolean 
+bonos Boolean
+}
+
+entity Cuota 
+{
+Abono2019 Boolean
+Abono2019Q BigDecimal
+Fecha2019Q Instant
+Abono2020 Boolean
+Abono2020Q BigDecimal
+Fecha2020Q Instant
+}
+
+entity Pago1
+{
+cantidad1 BigDecimal
+fecha1 Instant 
+}
+
+entity Pago2
+{
+cantidad2 BigDecimal
+fecha2 Instant 
+}
+
+relationship OneToMany 
+{
+Asociado {Pago1} to Pago1 
+Asociado {Pago2} to Pago2
+Asociado {Cuota} to Cuota
+}
+
+	
+
+
+
+
+
+
+
+
+
+

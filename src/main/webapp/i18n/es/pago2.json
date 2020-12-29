@@ -1,0 +1,25 @@
+{
+  "prueb0AsociadosApp": {
+    "pago2": {
+      "home": {
+        "title": "Pago 2 S",
+        "createLabel": "Crear nuevo Pago 2",
+        "createOrEditLabel": "Crear o editar Pago 2",
+        "search": "Buscar Pago 2",
+        "notFound": "Ningún Pago 2 S encontrado"
+      },
+      "created": "Un nuevo Pago 2 ha sido creado con el identificador {{ param }}",
+      "updated": "Un Pago 2 ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Pago 2 ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Pago 2 {{ id }}?"
+      },
+      "detail": {
+        "title": "Pago 2"
+      },
+      "cantidad2": "Cantidad 2",
+      "fecha2": "Fecha 2",
+      "asociado": "Asociado"
+    }
+  }
+}

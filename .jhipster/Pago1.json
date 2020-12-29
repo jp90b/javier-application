@@ -1,0 +1,33 @@
+{
+  "name": "Pago1",
+  "fields": [
+    {
+      "fieldName": "cantidad1",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fecha1",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "asociado",
+      "otherEntityRelationshipName": "pago1",
+      "relationshipName": "asociado",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201229114422",
+  "entityTableName": "pago_1",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

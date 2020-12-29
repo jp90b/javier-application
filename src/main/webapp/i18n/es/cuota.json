@@ -1,0 +1,29 @@
+{
+  "prueb0AsociadosApp": {
+    "cuota": {
+      "home": {
+        "title": "Cuotas",
+        "createLabel": "Crear nuevo Cuota",
+        "createOrEditLabel": "Crear o editar Cuota",
+        "search": "Buscar Cuota",
+        "notFound": "Ningún Cuotas encontrado"
+      },
+      "created": "Un nuevo Cuota ha sido creado con el identificador {{ param }}",
+      "updated": "Un Cuota ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Cuota ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Cuota {{ id }}?"
+      },
+      "detail": {
+        "title": "Cuota"
+      },
+      "abono2019": "Abono 2019",
+      "abono2019Q": "Abono 2019 Q",
+      "fecha2019Q": "Fecha 2019 Q",
+      "abono2020": "Abono 2020",
+      "abono2020Q": "Abono 2020 Q",
+      "fecha2020Q": "Fecha 2020 Q",
+      "asociado": "Asociado"
+    }
+  }
+}
