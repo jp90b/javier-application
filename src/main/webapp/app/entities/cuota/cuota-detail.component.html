@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cuota">
+            <h2><span jhiTranslate="prueb0AsociadosApp.cuota.detail.title">Cuota</span> {{ cuota.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.abono2019">Abono 2019</span></dt>
+                <dd>
+                    <span>{{ cuota.abono2019 }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.abono2019Q">Abono 2019 Q</span></dt>
+                <dd>
+                    <span>{{ cuota.abono2019Q }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.fecha2019Q">Fecha 2019 Q</span></dt>
+                <dd>
+                    <span>{{ cuota.fecha2019Q }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.abono2020">Abono 2020</span></dt>
+                <dd>
+                    <span>{{ cuota.abono2020 }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.abono2020Q">Abono 2020 Q</span></dt>
+                <dd>
+                    <span>{{ cuota.abono2020Q }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.fecha2020Q">Fecha 2020 Q</span></dt>
+                <dd>
+                    <span>{{ cuota.fecha2020Q }}</span>
+                </dd>
+                <dt><span jhiTranslate="prueb0AsociadosApp.cuota.asociado">Asociado</span></dt>
+                <dd>
+                    <div *ngIf="cuota.asociado">
+                        <a [routerLink]="['/asociado', cuota.asociado?.id, 'view']">{{ cuota.asociado?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cuota', cuota.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

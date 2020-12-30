@@ -1,0 +1,29 @@
+{
+  "prueb0AsociadosApp": {
+    "cuota": {
+      "home": {
+        "title": "Cuotas",
+        "createLabel": "Create a new Cuota",
+        "createOrEditLabel": "Create or edit a Cuota",
+        "search": "Search for Cuota",
+        "notFound": "No Cuotas found"
+      },
+      "created": "A new Cuota is created with identifier {{ param }}",
+      "updated": "A Cuota is updated with identifier {{ param }}",
+      "deleted": "A Cuota is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cuota {{ id }}?"
+      },
+      "detail": {
+        "title": "Cuota"
+      },
+      "abono2019": "Abono 2019",
+      "abono2019Q": "Abono 2019 Q",
+      "fecha2019Q": "Fecha 2019 Q",
+      "abono2020": "Abono 2020",
+      "abono2020Q": "Abono 2020 Q",
+      "fecha2020Q": "Fecha 2020 Q",
+      "asociado": "Asociado"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-cuota-heading" jhiTranslate="prueb0AsociadosApp.cuota.home.createOrEditLabel">Create or edit a Cuota</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.abono2019" for="field_abono2019">Abono 2019</label>
+                    <input type="checkbox" class="form-control" name="abono2019" id="field_abono2019"
+                           formControlName="abono2019"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.abono2019Q" for="field_abono2019Q">Abono 2019 Q</label>
+                    <input type="number" class="form-control" name="abono2019Q" id="field_abono2019Q"
+                           formControlName="abono2019Q"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.fecha2019Q" for="field_fecha2019Q">Fecha 2019 Q</label>
+                    <div class="d-flex">
+                        <input id="field_fecha2019Q" type="datetime-local" class="form-control" name="fecha2019Q" formControlName="fecha2019Q" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.abono2020" for="field_abono2020">Abono 2020</label>
+                    <input type="checkbox" class="form-control" name="abono2020" id="field_abono2020"
+                           formControlName="abono2020"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.abono2020Q" for="field_abono2020Q">Abono 2020 Q</label>
+                    <input type="number" class="form-control" name="abono2020Q" id="field_abono2020Q"
+                           formControlName="abono2020Q"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.fecha2020Q" for="field_fecha2020Q">Fecha 2020 Q</label>
+                    <div class="d-flex">
+                        <input id="field_fecha2020Q" type="datetime-local" class="form-control" name="fecha2020Q" formControlName="fecha2020Q" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="prueb0AsociadosApp.cuota.asociado" for="field_asociado">Asociado</label>
+                    <select class="form-control" id="field_asociado" name="asociado" formControlName="asociado">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="asociadoOption.id === editForm.get('asociado')!.value?.id ? editForm.get('asociado')!.value : asociadoOption" *ngFor="let asociadoOption of asociados; trackBy: trackById">{{ asociadoOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

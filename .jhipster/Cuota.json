@@ -1,0 +1,49 @@
+{
+  "name": "Cuota",
+  "fields": [
+    {
+      "fieldName": "abono2019",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "abono2019Q",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fecha2019Q",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "abono2020",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "abono2020Q",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fecha2020Q",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "asociado",
+      "otherEntityRelationshipName": "cuota",
+      "relationshipName": "asociado",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201229114322",
+  "entityTableName": "cuota",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Asociado",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellidos",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "acciones",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "bonos",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "pago1",
+      "otherEntityRelationshipName": "asociado",
+      "relationshipName": "pago1"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "pago2",
+      "otherEntityRelationshipName": "asociado",
+      "relationshipName": "pago2"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "cuota",
+      "otherEntityRelationshipName": "asociado",
+      "relationshipName": "cuota"
+    }
+  ],
+  "changelogDate": "20201229114222",
+  "entityTableName": "asociado",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

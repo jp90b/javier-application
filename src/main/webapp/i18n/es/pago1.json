@@ -1,0 +1,25 @@
+{
+  "prueb0AsociadosApp": {
+    "pago1": {
+      "home": {
+        "title": "Pago 1 S",
+        "createLabel": "Crear nuevo Pago 1",
+        "createOrEditLabel": "Crear o editar Pago 1",
+        "search": "Buscar Pago 1",
+        "notFound": "Ningún Pago 1 S encontrado"
+      },
+      "created": "Un nuevo Pago 1 ha sido creado con el identificador {{ param }}",
+      "updated": "Un Pago 1 ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Pago 1 ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Pago 1 {{ id }}?"
+      },
+      "detail": {
+        "title": "Pago 1"
+      },
+      "cantidad1": "Cantidad 1",
+      "fecha1": "Fecha 1",
+      "asociado": "Asociado"
+    }
+  }
+}

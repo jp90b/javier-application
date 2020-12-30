@@ -1,0 +1,30 @@
+{
+  "prueb0AsociadosApp": {
+    "asociado": {
+      "home": {
+        "title": "Asociados",
+        "createLabel": "Crear nuevo Asociado",
+        "createOrEditLabel": "Crear o editar Asociado",
+        "search": "Buscar Asociado",
+        "notFound": "Ningún Asociados encontrado"
+      },
+      "created": "Un nuevo Asociado ha sido creado con el identificador {{ param }}",
+      "updated": "Un Asociado ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Asociado ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Asociado {{ id }}?"
+      },
+      "detail": {
+        "title": "Asociado"
+      },
+      "nombre": "Nombre",
+      "apellidos": "Apellidos",
+      "email": "Email",
+      "acciones": "Acciones",
+      "bonos": "Bonos",
+      "pago1": "Pago 1",
+      "pago2": "Pago 2",
+      "cuota": "Cuota"
+    }
+  }
+}
